@@ -1,0 +1,124 @@
+PRE-SCRIPT INFO
+  Grading Script PID: 36323
+  Note: your smallsh will report a different PID when evaluating $$
+: BEGINNING TEST SCRIPT
+: 
+: --------------------
+: Using comment (5 points if only next prompt is displayed next)
+: : 
+: 
+: --------------------
+: ls (10 points for returning dir contents)
+: junk
+junk2
+main.c
+main - v1.c
+p3testscript
+smallsh
+testresults
+: 
+: 
+: --------------------
+: ls out junk
+: : 
+: 
+: --------------------
+: cat junk (15 points for correctly returning contents of junk)
+: junk
+junk2
+main.c
+main - v1.c
+p3testscript
+smallsh
+testresults
+: 
+: 
+: --------------------
+: wc in junk (15 points for returning correct numbers from wc)
+:  7  9 63
+: 
+: 
+: --------------------
+: wc in junk out junk2; cat junk2 (10 points for returning correct numbers from wc)
+: :  7  9 63
+: 
+: 
+: --------------------
+: Background child PID 36359 is starting
+: test -f badfile (10 points for returning error value of 1, note extraneous
+Background child PID 36359 is done with exit status 0
+: Exit status 1
+: 
+: 
+: --------------------
+: wc in badfile (10 points for returning text error)
+: Cannot open input file
+: No such file or directory
+: 
+: 
+: --------------------
+: badfile (10 points for returning text error)
+: execvp() failed, command could not be executed
+: No such file or directory
+: 
+: 
+: --------------------
+: sleep 100 background (10 points for returning process ID of sleeper)
+: Background child PID 36375 is starting
+: 
+: 
+: --------------------
+: pkill -signal SIGTERM sleep (10 points for pid of killed process, 10 points for signal)
+: (Ignore message about Operation Not Permitted)
+: pkill: killing pid 2384 failed: Operation not permitted
+pkill: killing pid 34368 failed: Operation not permitted
+pkill: killing pid 35023 failed: Operation not permitted
+pkill: killing pid 35875 failed: Operation not permitted
+pkill: killing pid 36207 failed: Operation not permitted
+pkill: killing pid 36224 failed: Operation not permitted
+pkill: killing pid 36235 failed: Operation not permitted
+pkill: killing pid 269360 failed: Operation not permitted
+pkill: killing pid 310401 failed: Operation not permitted
+Background child PID 36375 is terminated by signal 15
+: 
+: 
+: --------------------
+: sleep 1 background (10 pts for pid of bg ps when done, 10 for exit value)
+: Background child PID 36386 is starting
+: Background child PID 36386 is done with exit status 0
+: 
+: 
+: --------------------
+: pwd
+: /nfs/stak/users/tonv/cs344/smallsh
+: 
+: 
+: --------------------
+: cd
+: : 
+: 
+: --------------------
+: pwd (10 points for being in the HOME dir)
+: /nfs/stak/users/tonv
+: 
+: 
+: --------------------
+: mkdir testdir36325
+: : 
+: 
+: --------------------
+: cd testdir36325
+: : 
+: 
+: --------------------
+: pwd (5 points for being in the newly created dir)
+: /nfs/stak/users/tonv/testdir36325
+: --------------------
+: Background child PID 36422 is starting
+: Entering foreground-only mode (& is now ignored)
+: Testing foreground-only mode (20 points for entry exit text AND ~5 seconds between times)
+Background child PID 36422 is done with exit status 0
+Thu Nov  5 10:33:18 PST 2020
+: : Thu Nov  5 10:33:23 PST 2020
+: Exiting foreground-only mode
+: 
